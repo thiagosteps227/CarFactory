@@ -1,24 +1,55 @@
 package ait.ie.exercises;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class CarDB {
-	private final Map<String,Car> carList;
-	public CarDB(){
-		carList=new HashMap<String,Car>();
-	Car carOne=new Car("12MO1234","VW","Passat","Silver");
-	Car carTwo=new Car("131WH3485", "Ford", "Galaxy", "Red");
-	addCar(carOne);
-	addCar(carTwo);
+public class Car {
+	private String registration;
+	private static int numberOfCars;
+	private String model;
+	private String make;
+	private String color;
+	private int kilometers;
+	
+	public Car(String registration, String model, String make, String color) {
+		this.registration = registration;
+		this.model = model;
+		this.make = make;
+		this.color = color;
 	}
-
-
-	public void addCar(Car car){
-		carList.put(car.getRegistration(),car);
+	
+	public String getRegistration() {
+		return registration;
 	}
-
-	public Car findCarByReg(String registration){
-		return carList.get(registration);
+	
+	public int getKilometers() {
+		return kilometers;
+	}
+	
+	public String getColor() {
+		return color;
+	}
+	
+	public String getMake() {
+		return make;
+	}
+	
+	public String getModel() {
+		return model;
+	}
+	
+	public void setColor(String color) {
+		this.color = color;
+	}
+	
+	public void setKilometers(int kilometers) {
+		this.kilometers = kilometers;
+	}
+	
+	public static int getNumbersOfCars() {
+		return numberOfCars;
+	}
+	
+	@Override
+	public String toString() {
+		return "Car Details [Reg="+ registration+", make="+make+", model="+model+", "
+				+ "color="+color+", kilometers="+kilometers+"]";
 	}
 }
