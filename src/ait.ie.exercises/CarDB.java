@@ -14,11 +14,11 @@ public class CarDB {
 	}
 
 
-public void addCar(Car car){
-	carList.put(car.getRegistration(),car);
-}
+	public void addCar(Car car){
+		carList.put(car.getRegistration(),car);
+	}
 
-public Car findCarByReg(String registration){
-	return carList.get(registration);
-}
+	public Car findCarByReg(String registration){
+		return carList.get(registration);
+	}
 }
