@@ -27,6 +27,14 @@ public class Car {
 		return color;
 	}
 	
+	public String getMake() {
+		return make;
+	}
+	
+	public String getModel() {
+		return model;
+	}
+	
 	public void setColor(String color) {
 		this.color = color;
 	}
@@ -41,6 +49,7 @@ public class Car {
 	
 	@Override
 	public String toString() {
-		return 
+		return "Car Details [Reg="+ registration+", make="+make+", model="+model+", "
+				+ "color="+color+", kilometers="+kilometers+"]";
 	}
 }
